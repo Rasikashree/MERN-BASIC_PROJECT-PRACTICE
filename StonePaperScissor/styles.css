@@ -1,0 +1,173 @@
+/* Body and Container Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Smooth gradient animation (not needed now since background is black) */
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    background-color: #FF4B5C; /* Cherry red container */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: titleEffect 1.5s ease-in-out;
+}
+
+/* Animation for title text effect */
+@keyframes titleEffect {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Choices Section */
+.choices {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.choice-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the choice buttons with scaling and color */
+.choice-btn:hover {
+    transform: scale(1.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+
+.choice-btn:active {
+    transform: scale(0.95); /* Slightly shrink when clicked */
+}
+
+/* Round shape for the images */
+.choice-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 4px solid #fff; /* White border for contrast */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for images with scale and shadow */
+.choice-img:hover {
+    transform: scale(1.3);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Cherry red shadow on hover */
+}
+
+/* Scoreboard Section (Horizontal Layout) */
+.scoreboard {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #fff;
+    animation: slideIn 1s ease-out;
+}
+
+.scoreboard p {
+    margin: 0 15px;
+}
+
+/* Animation for sliding in the scoreboard */
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+#game-result {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #fff;
+    opacity: 0;
+    animation: resultSlideUp 1s forwards, colorChange 1s ease-in-out;
+}
+
+/* Animation for game result sliding up */
+@keyframes resultSlideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Smooth color change animation for the game result */
+@keyframes colorChange {
+    0% { color: #ff6f61; } /* Cherry red for win */
+    50% { color: #e74c3c; } /* Red for lose */
+    100% { color: #2ecc71; } /* Green for tie */
+}
+
+/* Reset Buttons */
+.reset-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #FF4B5C; /* Cherry red */
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for reset buttons */
+.reset-btn:hover {
+    background-color: #FF1F33; /* Darker cherry red on hover */
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.reset-btn:active {
+    transform: scale(0.95);
+}
+
+/* Buttons Section */
+.buttons {
+    margin-top: 20px;
+}
+
+/* Bounce effect when the score updates */
+@keyframes bounceScore {
+    0% { transform: translateY(-5px); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+}
+
+.scoreboard p span {
+    display: inline-block;
+    animation: bounceScore 0.6s ease-in-out;
+}

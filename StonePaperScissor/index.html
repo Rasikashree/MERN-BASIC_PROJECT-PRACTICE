@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone-Paper-Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stone-Paper-Scissors</h1>
+        <div class="choices">
+            <button id="stone" class="choice-btn">
+                <img src="rock.jpg" alt="Stone" class="choice-img">
+            </button>
+            <button id="paper" class="choice-btn">
+                <img src="paper.jpg" alt="Paper" class="choice-img">
+            </button>
+            <button id="scissors" class="choice-btn">
+                <img src="scissor.jpg" alt="Scissors" class="choice-img">
+            </button>
+        </div>
+        
+        <!-- Scoreboard Section -->
+        <div class="scoreboard">
+            <p>Wins: <span id="wins">0</span> | </p>
+            <p>Losses: <span id="losses">0</span> | </p>
+            <p>Ties: <span id="ties">0</span></p>
+        </div>
+        
+        <!-- Game Result Section -->
+        <div class="result">
+            <p>Your choice: <span id="user-choice"></span></p>
+            <p>Computer's choice: <span id="computer-choice"></span></p>
+            <p id="game-result"></p>
+        </div>
+        
+        <!-- Buttons Section -->
+        <div class="buttons">
+            <button id="reset" class="reset-btn">Reset Game</button>
+            <button id="reset-score" class="reset-btn">Reset Score</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
